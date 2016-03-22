@@ -24,7 +24,7 @@ namespace sensibo
         /// <summary>
         /// Initiate the connection to the sensibo web API
         /// </summary>
-        void initiateconnection(string apikey)
+        public void initiateconnection(string apikey)
         {
             try
             {
@@ -46,6 +46,14 @@ namespace sensibo
 
 
         }
+
+        public sensibo.pods getPods()
+        {
+            sensibo.restclient sclient = new sensibo.restclient();
+            return sclient.getpods();
+
+        }
+
     }
 
 }

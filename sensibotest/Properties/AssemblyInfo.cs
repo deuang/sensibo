@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("sensibo by Smarter Control")]
-[assembly: AssemblyDescription("sensibo API wrapper")]
+[assembly: AssemblyTitle("sensibotest")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Smarter Control")]
-[assembly: AssemblyProduct("sensibo")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("sensibotest")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("14a68c9e-f6ca-40e3-ad39-6fafd89528d9")]
+[assembly: Guid("ad9e0a3e-250c-4f24-aea8-5563336f9ae4")]
 
 // Version information for an assembly consists of the following four values:
 //
