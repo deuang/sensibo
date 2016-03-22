@@ -1,5 +1,5 @@
 # sensibo
-# by SmarterControl
+by SmarterControl
 
 www.smartercontrol.net
 
