@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace sensibo
 {
-
-    
+       
     public class api
     {
 
@@ -17,14 +16,13 @@ namespace sensibo
         //
         // By Duncan E Grant
         //==========================================================================================//
-
-
+        private string apiKey = "";
 
 
         /// <summary>
         /// Initiate the connection to the sensibo web API
         /// </summary>
-        public void initiateconnection(string apikey)
+        public api(string apikey)
         {
             try
             {
@@ -32,6 +30,7 @@ namespace sensibo
                 if (apikey.Equals("")) {
                     throw new ArgumentNullException("apikey", "please initate with an apikey");
                 }
+                apiKey = apikey;
 
             }
 
@@ -49,10 +48,27 @@ namespace sensibo
 
         public sensibo.pods getPods()
         {
-            sensibo.restclient sclient = new sensibo.restclient();
+            sensibo.restclient sclient = new sensibo.restclient(apiKey);
             return sclient.getpods();
-
         }
+
+        public sensibo.acstatus getPodStatus(string id)
+        {
+            sensibo.restclient sclient = new sensibo.restclient(apiKey);
+            return sclient.getpodstatus(id);
+        }
+
+        public sensibo.measurements getPodMeasurments(string id)
+        {
+            sensibo.restclient sclient = new sensibo.restclient(apiKey);
+            return sclient.getpodmeasurments(id);
+        }
+        public sensibo.setResult SetStatus(string id,sensibo.SetAcState state)
+        {
+            sensibo.restclient sclient = new sensibo.restclient(apiKey);
+            return sclient.postpodstatus(id,state);
+        }
+
 
     }
 
